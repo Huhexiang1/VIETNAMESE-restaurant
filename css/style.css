@@ -1,0 +1,814 @@
+@import "animate.css";
+@import url(//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:700,100,400);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+/*========================================================
+                        Includes
+=========================================================*/
+/*========================================================
+                      Main Styles
+=========================================================*/
+body {
+  background: transparent;
+  color: #766d6f;
+  font: 400 14px/20px 'Roboto', sans-serif;
+  -webkit-text-size-adjust: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  position: relative;
+  z-index: 2;
+  margin-top: 120px;
+  margin-bottom: 50px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  font-size: 60px;
+  line-height: 65px;
+  color: #805f43;
+  letter-spacing: 9px;
+}
+h1 span {
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 21px;
+}
+h1 span:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 65px;
+  display: block;
+  width: 18px;
+  height: 7px;
+  background: #805f43;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 35px;
+    letter-spacing: 7px;
+  }
+  h1 span {
+    letter-spacing: 15px;
+  }
+  h1 span:before {
+    left: 40px;
+    top: 0;
+    width: 12px;
+    height: 5px;
+  }
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 30px;
+    letter-spacing: 7px;
+  }
+  h1 span {
+    letter-spacing: 8px;
+  }
+  h1 span:before {
+    left: 29px;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+  }
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  color: #fff;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  h2 {
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: 3px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  h2 {
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 479px) {
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 3px;
+  }
+}
+h2.link01 {
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+h2.link01 .icon-arrow {
+  display: inline-block;
+  width: 23px;
+  height: 41px;
+  background: url(../images/icon_arrows.png) no-repeat 0 -35px;
+  vertical-align: baseline;
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  h2.link01 .icon-arrow {
+    margin-top: 5px;
+  }
+}
+h2.link01 a:hover {
+  color: #766d6f;
+}
+h2.link01 a:hover .icon-arrow {
+  background-position: -25px -35px;
+}
+h3 {
+  margin-bottom: 25px;
+  margin-top: 60px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #fff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+h3 span {
+  font-weight: 100;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+h2 a:hover,
+h3 a:hover,
+h4 a:hover {
+  color: #766d6f;
+}
+p a:hover {
+  text-decoration: underline;
+}
+time {
+  display: block;
+}
+a {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a:active {
+  background: transparent;
+}
+a:focus {
+  outline: none;
+}
+a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none;
+}
+strong {
+  font-weight: 700;
+}
+.fa {
+  line-height: inherit;
+}
+[class*='fa-']:before {
+  font-weight: 400;
+  font-family: 'FontAwesome';
+}
+.page {
+  overflow: hidden;
+  min-height: 500px;
+}
+.lt-ie9 .page {
+  min-width: 1200px;
+}
+/*=======================================================
+                       Main Layout
+=========================================================*/
+/*=======================================================
+                        Components
+=========================================================*/
+/*========================   Menu   ==========================*/
+.sf-menu {
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.sf-menu:before,
+.sf-menu:after {
+  content: " ";
+  display: table;
+}
+.sf-menu:after {
+  clear: both;
+}
+.sf-menu > li {
+  position: relative;
+  float: left;
+}
+.sf-menu > li + li {
+  margin-left: 100px;
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  .sf-menu > li + li {
+    margin-left: 50px;
+  }
+}
+.sf-menu a {
+  display: block;
+  color: #d7c6c8;
+  text-transform: uppercase;
+}
+.sf-menu > li.sfHover > a,
+.sf-menu > li > a:hover {
+  color: #805f43;
+}
+.sf-menu > li.active > a {
+  color: #805f43;
+}
+.sf-menu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  width: 195px;
+  margin-top: 0;
+  padding: 20px 20px 30px 35px;
+  background: #fefefe;
+  text-align: left;
+  z-index: 3;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.sf-menu ul > li {
+  margin-bottom: 5px;
+}
+.sf-menu ul > li.sfHover > a,
+.sf-menu ul > li > a:hover {
+  color: #805f43;
+}
+.sf-menu ul ul {
+  position: static;
+  top: 100%;
+  width: auto;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding: 0;
+  z-index: 4;
+}
+.sf-menu ul ul > li.sfHover > a,
+.sf-menu ul ul > li > a:hover {
+  color: #805f43;
+}
+.sf-menu > li > .sf-with-ul {
+  position: relative;
+}
+.sf-menu > li > .sf-with-ul:before {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  margin-left: -6px;
+  content: '\f0d7';
+  font: 400 12px/12px 'FontAwesome';
+}
+@media (max-width: 767px) {
+  .sf-menu {
+    display: none;
+  }
+}
+/*==================  Select Menu  ======================*/
+.select-menu {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  width: 420px;
+  border: 1px solid #d7c6c8;
+  background: #ffffff url('../images/select.png') no-repeat right center;
+  overflow: hidden;
+}
+.select-menu .select {
+  width: 440px;
+  height: 30px;
+  color: #585858;
+  background-color: transparent;
+  font: 400 15px 'Roboto', sans-serif;
+  line-height: 30px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+.select-menu .select::-ms-expand {
+  display: none;
+}
+@media (max-width: 767px) {
+  .select-menu {
+    display: block;
+  }
+}
+@media (max-width: 479px) {
+  .select-menu {
+    width: 270px;
+  }
+  .select-menu .select {
+    width: 290px;
+  }
+}
+/*==================  Stuck menu  ======================*/
+.isStuck {
+  background: #fefefe;
+  z-index: 999;
+  border-bottom: 1px solid #d7c6c8;
+}
+.isStuck .nav {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 979px) {
+  .isStuck {
+    display: none !important;
+  }
+}
+/*==================     ToTop     ======================*/
+.toTop {
+  width: 41px;
+  height: 22px;
+  background: url(../images/icon_arrows.png) no-repeat -40px 0;
+  position: fixed;
+  right: 66px;
+  bottom: 180px;
+  display: none;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 20;
+  -moz-transition: 0;
+  -o-transition: 0;
+  -webkit-transition: 0;
+  transition: 0;
+}
+.toTop:hover {
+  opacity: 0.4;
+}
+.lt-ie9 .toTop:hover {
+  filter: alpha(opacity=40);
+}
+@media only screen and (max-width: 1399px) {
+  .toTop {
+    display: none !important;
+  }
+}
+/*==================   Tumbnail    ======================*/
+.thumb {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.thumb img {
+  width: 100%;
+  height: auto;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+.thumb_overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  color: #ffffff;
+  background: transparent;
+}
+.thumb_overlay:before {
+  content: '\f065';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  font: 400 30px 'FontAwesome';
+  line-height: 30px;
+  margin-top: -15px;
+  text-align: center;
+}
+.lt-ie9 .thumb_overlay:before {
+  display: none;
+}
+.thumb:hover .thumb_overlay {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+.lt-ie9 .thumb:hover .thumb_overlay {
+  background: none;
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#80000000');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#80000000');
+  zoom: 1;
+}
+.lt-ie9 .thumb:hover .thumb_overlay:before {
+  display: block;
+}
+.thumb:hover img {
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/*==================    Buttons    ======================*/
+.btn {
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.btn .icon-arrow {
+  display: inline-block;
+  width: 7px;
+  height: 17px;
+  background: url(../images/icon_arrows.png) no-repeat 0 -80px;
+  vertical-align: middle;
+}
+.btn_right {
+  float: right;
+}
+.btn:hover {
+  color: #766d6f;
+}
+.btn:hover .icon-arrow {
+  background-position: -25px -80px;
+}
+p + .btn {
+  margin-top: 23px;
+}
+/*==================      Box      ======================*/
+.box01 {
+  margin-bottom: 30px;
+}
+.box01:before,
+.box01:after {
+  content: " ";
+  display: table;
+}
+.box01:after {
+  clear: both;
+}
+.box01 a:hover {
+  color: #fff;
+}
+.box02 {
+  color: #fff;
+  text-align: center;
+}
+.box02 .fa {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 35px;
+}
+.box03 {
+  margin-bottom: 45px;
+}
+.box03 h4 {
+  margin-top: 25px;
+}
+@media (max-width: 479px) {
+  .box03 img {
+    width: 100%;
+  }
+}
+.block01 {
+  padding: 0 60px 45px;
+  border: 8px solid #805f43;
+  text-align: center;
+  color: #805f43;
+}
+.block01 h2 {
+  color: #805f43;
+  text-shadow: 1px 1px 0 #fff;
+  margin-top: 40px;
+}
+.block01 p {
+  font-weight: 700;
+}
+@media (max-width: 479px) {
+  .block01 {
+    padding: 0 10px 45px;
+  }
+}
+/*========================================================
+                     HEADER  Section
+=========================================================*/
+header {
+  background: transparent;
+  padding-bottom: 35px;
+  text-align: center;
+  color: #805f43;
+  font-family: 'Roboto Slab', serif;
+}
+header .nav {
+  margin: 35px auto 20px;
+  display: inline-block;
+}
+header .addr {
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+header .addr a {
+  text-decoration: underline;
+}
+header .addr a:hover {
+  text-decoration: none;
+}
+header .addr .phone {
+  font-size: 36px;
+  line-height: 55px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+}
+@media (max-width: 479px) {
+  header .addr .phone {
+    font-size: 30px;
+  }
+}
+.schedule {
+  margin-top: 25px;
+  color: #cf5062;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 #fff;
+  text-transform: uppercase;
+}
+.schedule:before,
+.schedule:after {
+  content: " ";
+  display: table;
+}
+.schedule:after {
+  clear: both;
+}
+.schedule_left,
+.schedule_right {
+  float: left;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .schedule_left,
+  .schedule_right {
+    float: none;
+    width: 100%;
+  }
+}
+.schedule_left {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .schedule_left {
+    text-align: center;
+  }
+}
+.schedule_right {
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .schedule_right {
+    margin-top: 20px;
+    text-align: left;
+  }
+}
+.schedule .motto {
+  display: inline-block;
+  width: 140px;
+  margin-right: 10px;
+  margin-left: 15px;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: left;
+  letter-spacing: 3px;
+}
+.schedule .schedule-list {
+  margin-left: 10px;
+  letter-spacing: 1.5px;
+}
+/*==================     Brand     ======================*/
+.brand {
+  display: inline-block;
+  position: relative;
+}
+.brand .logo {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  margin-left: -110px;
+}
+/*========================================================
+                     CONTENT  Section
+=========================================================*/
+main {
+  display: block;
+  background: transparent;
+}
+.tc {
+  text-align: center;
+  color: #fff;
+}
+.mb01 {
+  margin-bottom: 35px;
+}
+.mt02 {
+  margin-top: 40px;
+}
+.logo-divider {
+  display: block;
+  margin: 15px auto;
+}
+.date {
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 700;
+}
+.date span {
+  font-weight: 100;
+  font-size: 60px;
+  line-height: 38px;
+}
+.thumb + .date {
+  margin-top: 30px;
+}
+.link03 {
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: underline;
+  letter-spacing: 2.5px;
+}
+.link03:hover {
+  text-decoration: none;
+}
+.circle-img {
+  border-radius: 50%;
+  margin: 30px 0;
+}
+.list01 li {
+  margin-bottom: 10px;
+}
+.list01 a {
+  color: #fff;
+}
+.list01 a .icon-arrow {
+  display: inline-block;
+  width: 7px;
+  height: 17px;
+  background: url(../images/icon_arrows.png) no-repeat 0 -80px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.list01 a:hover {
+  color: #766d6f;
+}
+.list01 a:hover .icon-arrow {
+  background-position: -25px -80px;
+}
+.privacy {
+  text-align: center;
+}
+/*==================      Well     ======================*/
+.well01 {
+  padding-bottom: 55px;
+}
+.well02 {
+  padding-bottom: 95px;
+}
+.well03 {
+  padding-top: 60px;
+  padding-bottom: 75px;
+}
+/*==================  Backgrounds  ======================*/
+.bg01 {
+  background: #372a2c url(../images/bg01.jpg) no-repeat top center;
+}
+.bg02 {
+  background: #372a2c url(../images/bg02.jpg) no-repeat top center;
+}
+.bg03 {
+  padding-bottom: 60px;
+  background: #805f43;
+  color: #fff;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .bg03 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.bg03 h3 {
+  margin-bottom: 30px;
+  line-height: 36px;
+}
+.bg03 img + h4 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.bg03 p {
+  font-weight: 700;
+}
+.bg03 .btn:hover {
+  color: #cf5062;
+}
+.bg03 .btn:hover .icon-arrow {
+  background-position: -15px -80px;
+}
+.bg04 {
+  background: url(../images/page2_img03.png) no-repeat top center;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .bg04 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.bg05 {
+  background: url(../images/page4_img5.png) no-repeat top center;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .bg05 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.bg05 h4 {
+  margin-bottom: 20px;
+}
+/*========================================================
+                     FOOTER  Styles
+=========================================================*/
+footer {
+  background: #3b2e30;
+  color: #4b3f42;
+  padding-bottom: 100px;
+}
+footer h1 {
+  color: #4b3f42;
+  margin-bottom: 15px;
+}
+footer h1 span:before {
+  background: #4b3f42;
+}
+footer .brand .logo {
+  top: 35px;
+  left: 0;
+  margin-left: 0;
+}
+footer .copy {
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 4.8px;
+}
+footer .copy a {
+  white-space: nowrap;
+}
+footer .copy a:hover {
+  text-decoration: underline;
+}
